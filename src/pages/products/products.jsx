@@ -12,14 +12,16 @@ function Products() {
     const [sort , setSort] = useState("asc")
   useEffect(() => {
     axios
-      .get(`https://dummyjson.com/products?limit=10&sortBy="title"&order=${sort}`)
+      .get(`https://dummyjson.com/products/category/beauty?sortBy=title&order=${sort}`)
       .then((response) => {
         setProducts(response.data.products);
+        console.log(response.data.products);
+        
       })
       .catch((error) => {
         console.error("Error fetching products:", error);
       });
-  }, []);
+  }, [sort]);
 
   return (
     <>
@@ -38,12 +40,13 @@ function Products() {
               style={{
                   display: "flex",
                   justifyContent: 'center',
-                  height: '7vh',
+                  height: '15vh',
                   alignItems: "center"
                   , gap: "10px",
-          }}>
+        }}>
+              <p>ACENDING</p>
               <button
-                  onClick={setSort('asc')} style={{
+                  onClick={() => setSort('asc')} style={{
                   width: "5vh",
                   height: '5vh',
                   borderRadius: "16px",
@@ -51,8 +54,9 @@ function Products() {
                   backgroundColor:"gray"
               }}><FaArrowUp style={{height:"5vh",width:"3vh",  color:"white"
               }}/></button>
+              <p>DESCENDING</p>
               <button
-                  onClick={setSort('desc')}
+                  onClick={() => setSort('desc')}
                   style={{
                   width: "5vh",
                   height: '5vh',

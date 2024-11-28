@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import "./products.scss";
 const ProductsCard = ({ product }) => {
   const imageUrl =
     product.images && product.images.length > 0
@@ -25,11 +26,11 @@ const ProductsCard = ({ product }) => {
           width: "100%",
           height: "40vh",
           borderRadius: "10px",
-          objectFit: "cover",
+          objectFit: "contain",
           transition: "transform 0.6s ease",
           cursor: "pointer",
         }}
-        onMouseOver={(e) => (e.target.style.transform = "scale(1.2)")}
+        onMouseOver={(e) => (e.target.style.transform = "scale(1.5)")}
         onMouseOut={(e) => (e.target.style.transform = "scale(1)")}
       />
 
