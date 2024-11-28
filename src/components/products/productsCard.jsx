@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import "./products.scss";
+import "./productsCard.scss";
 const ProductsCard = ({ product }) => {
   const imageUrl =
     product.images && product.images.length > 0
@@ -51,7 +51,7 @@ const ProductsCard = ({ product }) => {
               height: "5vh",
               border: "none",
               backgroundColor: "rgba(122, 43, 72, 0.753)",
-              color: "aliceblue",
+              color: "white",
               textDecoration: "none",
               width: "7vw",
               marginTop: "10px",

@@ -6,3 +6,18 @@ h1{
     font-size: 7vh;
     font-weight: 300;
 }
+.fileter{
+    display: flex;
+    justify-content: center;
+    height: 15vh;
+    align-items: center;
+    gap: 10px;
+}
+.category{
+    height: 5vh;
+    border-radius: 12px;
+    background-color: grey;
+    color: white;
+    border: none;
+    font-size: 16px;
+}
