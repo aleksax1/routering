@@ -1,0 +1,21 @@
+.nav2 {
+  font-size: larger;
+  background-color: rgba(73, 14, 36, 0.753);
+}
+.nav2 {
+  div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 11px 0;
+    transition: transform 0.7s ease;
+  }
+  div:hover {
+    background-color: rgb(94, 44, 66);
+    transform: scale(1.1);
+  }
+}
+.link {
+  text-decoration: none;
+  color: aliceblue;
+}
