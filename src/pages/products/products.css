@@ -9,15 +9,57 @@ h1{
 .fileter{
     display: flex;
     justify-content: center;
-    height: 15vh;
+    height: 8vh;
     align-items: center;
     gap: 10px;
+
+    button{
+        width: 5vh;
+        height: 5vh;
+        border-radius: 16px;
+        border: none;
+        background-color: gray;
+    }
 }
-.category{
+
+.nav-category {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    height: 10vh;
+  }
+  
+  .categories {
+    display: flex;
     height: 5vh;
-    border-radius: 12px;
-    background-color: grey;
+    gap: 10px;
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .categories button {
+    background-color: gray;
     color: white;
     border: none;
-    font-size: 16px;
-}
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .categories button.active {
+    background-color: rgb(212, 77, 136);
+  }
+  
+  .categories button:hover {
+    background-color: darkgray;
+  }
+  
+  .fileter button.active {
+    background-color: rgb(212, 77, 136);
+  }
+  
+  .fileter button:hover {
+    background-color: darkgray;
+  }

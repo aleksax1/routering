@@ -1,0 +1,25 @@
+.txt{
+    padding: 0 10px 10px 0px;
+
+    button{
+        height: 5vh;
+        border: none;
+        background-color: rgba($color: #8b325a, $alpha: 1.0);
+        color: white;
+        text-decoration: none;
+        width: 7vw;
+        margin-top: 10px;
+        border-radius: 10px;
+    }
+}
+.card{
+    width: 28vw;
+    background-color: pink;
+    border-radius: 10px;
+    padding: 10px;
+    color: white;
+    margin: 10px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 7px 15px
+
+   
+}

@@ -8,16 +8,8 @@ const ProductsCard = ({ product }) => {
       : "fallback_image_url.png";
   const navigate = useNavigate();
   return (
-    <div
-      style={{
-        width: "28vw",
-        backgroundColor: "pink",
-        borderRadius: "10px",
-        padding: "10px",
-        color: "white",
-        margin: "10px",
-        boxShadow: "rgba(0, 0, 0, 0.3) 0px 7px 15px",
-      }}
+    <div className="card"
+     
     >
       <img
         src={imageUrl}
@@ -33,33 +25,22 @@ const ProductsCard = ({ product }) => {
         onMouseOver={(e) => (e.target.style.transform = "scale(1.5)")}
         onMouseOut={(e) => (e.target.style.transform = "scale(1)")}
       />
-
-      <h2>{product.title}</h2>
-      <p>{product.description}</p>
-      <p>Price: ${product.price}</p>
-      <div>
-        <div
-          style={{
-            display: "flex",
-            justifyItems: "center",
-            alignItems: "center",
-          }}
-        >
-          <button
-            onClick={() => navigate(`/oneproduct/${product.id}`)}
+      <div className="txt">
+        <h2>{product.title}</h2>
+        <p>{product.description}</p>
+        <p>Price: ${product.price}</p>
+        <div>
+          <div
             style={{
-              height: "5vh",
-              border: "none",
-              backgroundColor: "rgba(122, 43, 72, 0.753)",
-              color: "white",
-              textDecoration: "none",
-              width: "7vw",
-              marginTop: "10px",
-              borderRadius: "10px",
+              display: "flex",
+              justifyItems: "center",
+              alignItems: "center",
             }}
           >
-            BUY
-          </button>
+            <button onClick={() => navigate(`/oneproduct/${product.id}`)}>
+              BUY
+            </button>
+          </div>
         </div>
       </div>
     </div>

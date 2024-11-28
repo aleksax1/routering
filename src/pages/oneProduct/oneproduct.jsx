@@ -5,6 +5,8 @@ import { useParams } from "react-router-dom";
 import Footer from "../../components/footer/footer";
 import Nav from "../../components/nav/nav";
 import "./oneproduct.css";
+import { Link } from "react-router-dom";
+
 
 function OneProduct() {
   const { id } = useParams();
@@ -72,19 +74,27 @@ function OneProduct() {
             </select>
           </form>
           <button
-            onClick={() => toast.success("Successfully purchased!")}
+            onClick={() => toast.success(`Successfully purchased, costed you ${totalPrice} `)}
             style={{
               height: "5vh",
               border: "none",
               backgroundColor: "rgba(122, 43, 72, 0.753)",
               color: "aliceblue",
               textDecoration: "none",
-              width: "7vw",
+              width: "8vw",
               marginTop: "10px",
               borderRadius: "10px",
             }}
           >
-            PURCHOSE
+            <Link
+            to="/"
+            style={{
+              color: "white",
+              textDecoration: "none",
+            }}
+          >
+            PURCUSE
+          </Link>
           </button>
         </div>
       </div>

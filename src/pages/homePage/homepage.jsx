@@ -58,8 +58,8 @@ function HomePage() {
           style={{
             height: "5vh",
             border: "none",
-            backgroundColor: "rgba(122, 43, 72, 0.753)",
-            color: "aliceblue",
+            backgroundColor: "rgba(100, 33, 62, 0.9)",
+            color: "whote",
             textDecoration: "none",
             width: "7vw",
             borderRadius: "10px",
@@ -68,7 +68,7 @@ function HomePage() {
           <Link
             to="/products"
             style={{
-              color: "aliceblue",
+              color: "white",
               textDecoration: "none",
             }}
           >

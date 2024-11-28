@@ -40,47 +40,46 @@ function Products() {
         src="https://www.shutterstock.com/image-photo/makeup-professional-cosmetics-on-pink-600nw-1398700589.jpg"
         alt=""
       />
+      <div className="nav-category">
+  <div className="categories">
+    <button
+      onClick={() => setCategory("beauty")}
+      className={category === "beauty" ? "active" : ""}
+    >
+      Beauty
+    </button>
+    <button
+      onClick={() => setCategory("womens-bags")}
+      className={category === "womens-bags" ? "active" : ""}
+    >
+      Women Bags
+    </button>
+    <button
+      onClick={() => setCategory("fragrances")}
+      className={category === "fragrances" ? "active" : ""}
+    >
+      Fragrances
+    </button>
+    <button
+      onClick={() => setCategory("sunglasses")}
+      className={category === "sunglasses" ? "active" : ""}
+    >
+      Sunglasses
+    </button>
+  </div>
+</div>
       <div className="fileter">
-        <p>ACENDING</p>
-        <button
-          onClick={() => setSort("asc")}
-          style={{
-            width: "5vh",
-            height: "5vh",
-            borderRadius: "16px",
-            border: "none",
-            backgroundColor: "gray",
-          }}
-        >
+        <p>ACS</p>
+        <button onClick={() => setSort("asc")}>
           <FaArrowUp style={{ height: "5vh", width: "3vh", color: "white" }} />
         </button>
-        <p>DESCENDING</p>
-        <button
-          onClick={() => setSort("desc")}
-          style={{
-            width: "5vh",
-            height: "5vh",
-            borderRadius: "16px",
-            border: "none",
-            backgroundColor: "gray",
-          }}
-        >
+        <p>DESC</p>
+        <button onClick={() => setSort("desc")}>
           <FaArrowDown
             style={{ color: "white", height: "4vh", width: "3vh" }}
           />
         </button>
-        <p>CATEGORY:</p>
-        <select
-          name="category"
-          id="category"
-          className="category"
-          onChange={onChangeSelect}
-          value={category}
-        >
-          <option value="beauty">beauty</option>
-          <option value="fragrances">fragrances</option>
-          <option value="sunglasses">sunglasses</option>
-        </select>
+        
       </div>
       <div
         style={{
